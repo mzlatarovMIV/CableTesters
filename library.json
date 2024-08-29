@@ -1,0 +1,9 @@
+{
+  "name": "Cable Testers",
+  "version": "1.0.0.r2908241",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/mzlatarovMIV/CableTesters.git"
+  }
+}
