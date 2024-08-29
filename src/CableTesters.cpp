@@ -19,10 +19,10 @@ void TestCable::begin(bool Display_Enable, uint8_t PinErrorLED, uint8_t PinPassL
 
 void TestCable::SetPinsPullUP(uint8_t* PinsToSet, size_t size)
 {
-    for (size_t i = 0; i < size; i++)
-    {
+  for (size_t i = 0; i < size; i++)
+  {
     pinMode(PinsToSet[i],INPUT_PULLUP);
-    }
+  }
 }   
 
 void TestCable::SetPinsPullDown(uint8_t* PinsToSet, size_t size)
