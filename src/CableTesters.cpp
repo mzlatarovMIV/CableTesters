@@ -225,3 +225,20 @@ uint8_t TestCable::DiodeTest(uint8_t* Anode, size_t size_A, uint8_t* Cathode, si
   }
   return 1;
 } 
+
+uint8_t TestCable::CableDetect(uint8_t SetDetection, uint8_t DetectionPin)
+{
+  pinMode(SetDetection, OUTPUT);
+  pinMode(DetectionPin, INPUT_PULLUP);
+  digitalWrite(SetDetection, LOW);
+  if(!digitalRead(DetectionPin))
+  {
+    Serial.println("Cable detected");
+    pinMode(SetDetection, INPUT_PULLUP);
+    return 0;
+  }
+  else
+  {
+    return 1;
+  }
+}

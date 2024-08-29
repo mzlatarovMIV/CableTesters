@@ -175,7 +175,16 @@ class TestCable
     * @return uint8_t, error=1, pass=0
     */
     uint8_t DiodeTest(uint8_t* Anode, size_t size_A, uint8_t* Cathode, size_t size_C);
-
+    /**
+     * @brief Cable detect function
+     *  
+     * @param SetDetection Pin to set for cable detection
+     * 
+     * @param DetectionPin Pin to read for detection
+     * 
+     * @return returns to test execurtion after cable has been detected
+     */
+    uint8_t CableDetect(uint8_t SetDetection, uint8_t DetectionPin); 
   private:
 };
 #endif
